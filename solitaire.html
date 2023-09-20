@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="solitaire.css">
+        <script type="text/javascript" src="solitaire.js"></script>
+        <title>Solitaire</title>
+    </head>
+    <body>
+        <a href="test.html">click here</a>
+        <input type="button" value="New Game" onclick="newGame()">
+        <div id="testJS">Je test Javascript</div>
+        <div id="containerTop">
+            <div id="flippingArea">
+                <div id="deck" onclick="flipCard(event)">
+                    <div class="playingCards">
+                        <span class="value">A</span>
+                        <span class="suit hearts">&heartsuit;</span>
+                    </div>
+                </div>
+                <div id="flippedCards" onclick="moveCard(event)">
+                    <div class="playingCards">
+                        <span class="value">A</span>
+                        <span class="suit hearts">&heartsuit;</span>
+                    </div>
+                </div>
+            </div>
+            <div id="completionContainer">
+                <div>
+                    <div class="playingCards">
+                        <span class="value">A</span>
+                        <span class="suit hearts">&heartsuit;</span>
+                    </div>
+                </div>
+                <div><div class="playingCards">
+                    <span class="value">A</span>
+                    <span class="suit hearts">&heartsuit;</span>
+                </div></div>
+                <div><div class="playingCards">
+                    <span class="value">A</span>
+                    <span class="suit hearts">&heartsuit;</span>
+                </div></div>
+                <div><div class="playingCards">
+                    <span class="value">A</span>
+                    <span class="suit hearts">&heartsuit;</span>
+                </div></div>
+            </div>
+        </div>
+        <div id="containerBottom"> 
+            <div id="0" onclick="moveTo(event,0)">
+                
+            </div>
+            <div id="1" onclick="moveTo(event,1)">
+
+            </div>
+            <div id="2" onclick="moveTo(event,2)">
+
+            </div>
+            <div id="3" onclick="moveTo(event,3)">
+
+            </div>
+            <div id="4" onclick="moveTo(event,4)">
+
+            </div>
+            <div id="5" onclick="moveTo(event,5)">
+
+            </div>
+            <div id="6" onclick="moveTo(event,6)">
+
+            </div>
+        </div>
+    </body>
+</html>

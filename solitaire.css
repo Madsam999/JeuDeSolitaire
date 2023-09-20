@@ -1,0 +1,59 @@
+.playingCards {
+    border-color: black;
+    border: 3px solid;
+    height: 150px;
+    width: 110px;
+    margin: 5px;
+}
+
+.suit {
+    font-size: 1.5em;
+}
+
+.value {
+    font-size: 1.5em;
+}
+
+.spade {
+    color: black;
+}
+
+.club {
+    color: black;
+}
+
+.diamond {
+    color: red;
+}
+
+.heart {
+    color: red;
+}
+
+#containerTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+#containerBottom {
+    display: flex;
+    border: 3px black solid;
+}
+
+#completionContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    border: 4px black solid;
+    border-radius: 5px;    
+    position: relative;
+
+}
+
+#flippingArea {
+    display: flex;
+}
+
+#testDiv {
+    border: 3px solid blueviolet;
+}

@@ -88,6 +88,24 @@ function moveCard(event) {
     if(cardId == 0){
         col0[0].setMoving(true)
     }
+    else if(cardId == 1) {
+        col1[0].setMoving(true)
+    }
+    else if(cardId == 2) {
+        col2[0].setMoving(true)
+    }
+    else if(cardId == 3) {
+        col3[0].setMoving(true)
+    }
+    else if(cardId == 4) {
+        col4[0].setMoving(true)
+    }
+    else if(cardId == 5) {
+        col5[0].setMoving(true)
+    }
+    else if(cardId == 6) {
+        col6[0].setMoving(true)
+    }
     columnInMovement = cardId
     console.log(columnInMovement)
 }
@@ -95,8 +113,26 @@ function moveCard(event) {
 
 function moveTo(event,cardPosition) {
     var cardNextPosition = cardPosition
-    if(cardNextPosition == 1) {
-        canMove(1)
+    if(cardNextPosition == 0) {
+        canMove(col0)
+    }
+    else if(cardNextPosition == 1) {
+        canMove(col1)
+    }
+    else if(cardNextPosition == 2) {
+        canMove(col2)
+    }
+    else if(cardNextPosition == 3) {
+        canMove(col3)
+    }
+    else if(cardNextPosition == 4) {
+        canMove(col4)
+    }
+    else if(cardNextPosition == 5) {
+        canMove(col5)
+    }
+    else if(cardNextPosition == 6) {
+        canMove(col6)
     }
 }
 
@@ -104,6 +140,84 @@ function moveTo(event,cardPosition) {
 function canMove(nextPos) {
     if(columnInMovement == 0) {
         var cardInMovement = col0[0]
+        cardInMovement.setMoving(false)
+        if(nextPos[0].color == cardInMovement.color) {
+            console.log("nope big")
+        }
+        else if(nextPos[0].value <= cardInMovement.value) {
+            console.log("nope big")
+        }
+        else {
+            console.log("yessir")
+        }
+    }
+    if(columnInMovement == 1) {
+        var cardInMovement = col1[0]
+        cardInMovement.setMoving(false)
+        if(nextPos[0].color == cardInMovement.color) {
+            console.log("nope big")
+        }
+        else if(nextPos[0].value <= cardInMovement.value) {
+            console.log("nope big")
+        }
+        else {
+            console.log("yessir")
+        }
+    }
+    if(columnInMovement == 2) {
+        var cardInMovement = col2[0]
+        cardInMovement.setMoving(false)
+        if(nextPos[0].color == cardInMovement.color) {
+            console.log("nope big")
+        }
+        else if(nextPos[0].value <= cardInMovement.value) {
+            console.log("nope big")
+        }
+        else {
+            console.log("yessir")
+        }
+    }
+    if(columnInMovement == 3) {
+        var cardInMovement = col3[0]
+        cardInMovement.setMoving(false)
+        if(nextPos[0].color == cardInMovement.color) {
+            console.log("nope big")
+        }
+        else if(nextPos[0].value <= cardInMovement.value) {
+            console.log("nope big")
+        }
+        else {
+            console.log("yessir")
+        }
+    }
+    if(columnInMovement == 4) {
+        var cardInMovement = col4[0]
+        cardInMovement.setMoving(false)
+        if(nextPos[0].color == cardInMovement.color) {
+            console.log("nope big")
+        }
+        else if(nextPos[0].value <= cardInMovement.value) {
+            console.log("nope big")
+        }
+        else {
+            console.log("yessir")
+        }
+    }
+    if(columnInMovement == 5) {
+        var cardInMovement = col5[0]
+        cardInMovement.setMoving(false)
+        if(nextPos[0].color == cardInMovement.color) {
+            console.log("nope big")
+        }
+        else if(nextPos[0].value <= cardInMovement.value) {
+            console.log("nope big")
+        }
+        else {
+            console.log("yessir")
+        }
+    }
+    if(columnInMovement == 6) {
+        var cardInMovement = col6[0]
         cardInMovement.setMoving(false)
         if(nextPos[0].color == cardInMovement.color) {
             console.log("nope big")
@@ -134,6 +248,7 @@ function newGame() {
     deckToFlip = []
     for(let i = 28; i<deck.length; i++) {
         deckToFlip.push(deck[i])
+        
     }
 
     showStartCards()

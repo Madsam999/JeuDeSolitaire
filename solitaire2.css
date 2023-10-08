@@ -1,0 +1,26 @@
+#topArea,#playingArea {
+    display: flex;
+}
+
+#topArea {
+    justify-content: space-between;
+}
+
+#unflippedDeck,#flippedDeck,#comp1, #comp2, #comp3, #comp4, #col0, #col1, #col2, #col3, #col4, #col5, #col6 {
+    border: 3px solid black;
+    height: 144px;
+    width: 100px;
+    margin: 5px;
+}
+
+#deckArea, #completionContainer {
+    display: flex;
+}
+
+#playingArea {
+    justify-content: center;
+}
+
+#col0, #col1, #col2, #col3, #col4, #col5, #col6 {
+    height: 1008px;
+}

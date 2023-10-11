@@ -10,20 +10,23 @@
         <h1 style="text-align: center;">
             This a test for drag and drop components
         </h1>
-
+        <h2>Most version of the drag and drop</h2>
         <div id="window">
-
-            <div id="drag1" ondrop="drop1(event)" ondragover="allowDrop1(event)">
-                <img src="../Card_Asset/Standard_52_Cards/solitaire/individuals/10_club.png" 
-                draggable="true" ondrag="drag1(event)">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="image1" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/10_club.png" draggable="true" ondragstart="drag(event)">
             </div>
-            <div id="drag2" ondrop="drop1(event)" ondragover="allowDrop1(event)">
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
 
             </div>
-
         </div>
-
-
-
+        <h2>Slightly upgraded version this time</h2>
+        <div id="window2">
+            <div id="div3" ondrop="drop2(event)" ondragover="allowDrop2(event)">
+                <img id="image2" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/10_club.png" draggable="true" ondragstart="drag2(event)">
+            </div>
+            <div id="div4" ondrop="drop2(event)" ondragover="allowDrop2(event)">
+                <img id="image3" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/9_diamond.png" draggable="true" ondragstart="drag2(event)">
+            </div>
+        </div>
     </body>
 </html>

@@ -1,4 +1,4 @@
-#window, #window2 {
+#window {
     border: black 1px solid;
     height: 90vh;
     width: 90vw;
@@ -15,4 +15,10 @@
     border: red 1px solid;
     height: 200px;
     width: 150px;  
+}
+
+#div5, #div6 {
+    border: purple 1px solid;
+    height: 200px;
+    width: 150px;
 }

@@ -81,14 +81,14 @@ function checkCard(event) {
 function checkIfCanMove(position) {
     switch(position) {
         case 3:
-            if(cardInMovement.value < col3[0].value && col3[0].colour != cardInMovement.colour) {
+            if(cardInMovement.value == col3[0].value - 1 && col3[0].colour != cardInMovement.colour) {
                 return true
             }
             else {
                 return false
             }
         case 4:
-            if(cardInMovement.value < col4[0].value && col4[0].colour != cardInMovement.colour) {
+            if(cardInMovement.value == col4[0].value - 1 && col4[0].colour != cardInMovement.colour) {
                 return true
             }
             else {
@@ -99,3 +99,81 @@ function checkIfCanMove(position) {
 
 // -----------------------------------------------------------
 
+var col5 = []
+var col6 = []
+
+var card1 = new Card(10,"club")
+var card2 = new Card(9,"diamond")
+var card3 = new Card(11,"diamond")
+
+var cardInMovement2 = -1
+
+col5.push(card3)
+col5.push(card1)
+col6.push(card2)
+
+function allowDrop3(ev) {
+	ev.preventDefault();
+}
+
+function drag3(ev) {
+	ev.dataTransfer.setData(["text"], ["image5","image7"]);
+    // console.log(ev.target, ev.target.id);
+    checkCard2(ev);
+    checkIfMultipleCardsInMovement(ev)
+}
+
+function drop3(ev,position) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    console.log(data[0])
+    if(checkIfCanMove2(position)) {
+        if(ev.target.tagName.toLowerCase() == "img") {
+            var data = ev.dataTransfer.getData("text")
+            ev.target.parentElement.appendChild(document.getElementById(data));
+        }
+        else {
+            var data = ev.dataTransfer.getData("text")
+            ev.target.appendChild(document.getElementById(data));
+        }
+    }
+    else {
+        console.log("nuhuh")
+    }
+}
+
+function checkCard2(event) {
+    if(event.target.id == "image4") {
+        cardInMovement2 = col5[col5.length - 1]
+    }
+    else if(event.target.id == "image5") {
+        cardInMovement2 = col6[0]
+    }
+}
+
+function checkIfCanMove2(position) {
+    switch(position) {
+        case 5:
+            if(cardInMovement2.value == col5[col5.length - 1].value - 1 && col5[col5.length - 1].colour != cardInMovement2.colour) {
+                return true
+            }
+            else {
+                return false
+            }
+        case 6:
+            if(cardInMovement2.value == col6[col6.length - 1].value - 1 && col6[col6.length - 1].colour != cardInMovement2.colour) {
+                return true
+            }
+            else {
+                return false
+            }
+    }
+}
+
+function checkIfMultipleCardsInMovement(event) {
+    var firstCard = event.target
+    var firstCardParent = firstCard.parentElement
+    var parentChildrenList = firstCardParent.children
+    var firstCardID = firstCard.id
+
+}

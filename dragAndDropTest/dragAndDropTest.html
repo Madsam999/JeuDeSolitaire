@@ -10,7 +10,7 @@
         <h1 style="text-align: center;">
             This a test for drag and drop components
         </h1>
-        <h2>Most version of the drag and drop</h2>
+        <h2>Most basic version of the drag and drop</h2>
         <div id="window">
             <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img id="image1" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/10_club.png" draggable="true" ondragstart="drag(event)">
@@ -20,12 +20,23 @@
             </div>
         </div>
         <h2>Slightly upgraded version this time</h2>
-        <div id="window2">
+        <div id="window">
             <div id="div3" ondrop="drop2(event,3)" ondragover="allowDrop2(event)">
                 <img id="image2" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/10_club.png" draggable="true" ondragstart="drag2(event)">
             </div>
             <div id="div4" ondrop="drop2(event,4)" ondragover="allowDrop2(event)">
                 <img id="image3" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/9_diamond.png" draggable="true" ondragstart="drag2(event)">
+            </div>
+        </div>
+        <h2>This time I'll try to drag multipe cards at once</h2>
+        <div id="window">
+            <div id="div5" ondrop="drop3(event,5)" ondragover="allowDrop3(event)">
+                <img id="image6" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/11_diamond.png" draggable="true" ondragstart="drag3(event)">
+                <img id="image4" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/10_club.png" draggable="true" ondragstart="drag3(event)">
+            </div>
+            <div id="div6" ondrop="drop3(event,6)" ondragover="allowDrop3(event)">
+                <img id="image5" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/9_diamond.png" draggable="true" ondragstart="drag3(event)">
+                <img id="image7" src="../Card_Asset/Standard_52_Cards/solitaire/individuals/8_club.png" draggable="true" ondragstart="drag3(event)">
             </div>
         </div>
     </body>

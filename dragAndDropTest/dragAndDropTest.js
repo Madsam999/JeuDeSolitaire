@@ -112,29 +112,32 @@ col5.push(card3)
 col5.push(card1)
 col6.push(card2)
 
+var data = []
+
 function allowDrop3(ev) {
 	ev.preventDefault();
 }
 
 function drag3(ev) {
-	ev.dataTransfer.setData(["text"], ["image5","image7"]);
+    var dataInDrag = getData()
     // console.log(ev.target, ev.target.id);
     checkCard2(ev);
     checkIfMultipleCardsInMovement(ev)
 }
 
 function drop3(ev,position) {
+    var dataIndrop = getData()
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    console.log(data[0])
     if(checkIfCanMove2(position)) {
         if(ev.target.tagName.toLowerCase() == "img") {
-            var data = ev.dataTransfer.getData("text")
-            ev.target.parentElement.appendChild(document.getElementById(data));
+            for(let i = 0; i < dataIndrop.length; i++) {
+                ev.target.parentElement.appendChild(document.getElementById(dataIndrop[i]));
+            }
         }
         else {
-            var data = ev.dataTransfer.getData("text")
-            ev.target.appendChild(document.getElementById(data));
+            for(let i = 0; i < dataIndrop.length; i++) {
+                ev.target.parentElement.appendChild(document.getElementById(dataIndrop[i]));
+            }
         }
     }
     else {
@@ -171,9 +174,22 @@ function checkIfCanMove2(position) {
 }
 
 function checkIfMultipleCardsInMovement(event) {
-    var firstCard = event.target
-    var firstCardParent = firstCard.parentElement
-    var parentChildrenList = firstCardParent.children
-    var firstCardID = firstCard.id
+    var firstCardId = event.target.id
+    var firstCardParent = event.target.parentElement
+    var foundCard = false
+    for(let i = 0; i < firstCardParent.children.length; i++) {
+        if(firstCardId === firstCardParent.children[i].id) {
+            foundCard = true
+        }
 
+        if(foundCard) {
+            data.push(firstCardParent.children[i].id)
+        }
+    }
 }
+
+function getData() {
+    return data
+}
+
+// ------------------------------------------------

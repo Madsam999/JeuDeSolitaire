@@ -1,0 +1,26 @@
+#deckToFlip, #flippedDeck, #comp1, #comp2, #comp3, #comp4 {
+    width: 100px;
+    height: 144px;
+    border: solid black 1px;
+}
+
+#topArea {
+    justify-content: space-between;
+}
+
+#deckArea, #compArea {
+    display: flex;
+}
+
+#topArea, #playingArea {
+    display: flex;
+}
+
+#div1, #div2, #div3, #div4, #div5, #div6, #div7 {
+    display: inline-block;
+    width: 100px;
+    height: fit-content;
+    min-height: 144px;
+    overflow: hidden;
+    border: solid black 1px;
+}

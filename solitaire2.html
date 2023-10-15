@@ -8,33 +8,33 @@
         <script src="solitaire2.js" type="text/javascript"></script>
     </head>
     <body>
-        <div id="topArea">
+        <div id="topArea" ondrop="drop(event,0)" ondragover="allowDrop(event)">
             <div id="deckArea">
                 <div id="deckToFlip">
 
                 </div>
-                <div id="flippedDeck">
+                <div id="flippedDeck" ondrop="drop(event,8)" ondragover="allowDrop(event)">
     
                 </div>
             </div>
 
             <div id="compArea">
-                <div id="comp1">
+                <div id="comp1" ondrop="drop(event,9)" ondragover="allowDrop(event)">
 
                 </div>
-                <div id="comp2">
+                <div id="comp2" ondrop="drop(event,10)" ondragover="allowDrop(event)">
     
                 </div>
-                <div id="comp3">
+                <div id="comp3" ondrop="drop(event,11)" ondragover="allowDrop(event)">
     
                 </div>
-                <div id="comp3">
+                <div id="comp3" ondrop="drop(event,12)" ondragover="allowDrop(event)">
     
                 </div>
             </div>
         </div>
         <input type="button" value="Start!" onclick="start()">
-        <div id="playingArea">
+        <div id="playingArea" ondrop="drop(event,0)" ondragover="allowDrop(event)">
             <div id="div1" ondrop="drop(event,1)" ondragover="allowDrop(event)">
 
             </div>
@@ -53,7 +53,7 @@
             <div id="div6" ondrop="drop(event,6)" ondragover="allowDrop(event)">
 
             </div>
-            <div id="div7">
+            <div id="div7" ondrop="drop(event,7)" ondragover="allowDrop(event)">
 
             </div>
         </div>
